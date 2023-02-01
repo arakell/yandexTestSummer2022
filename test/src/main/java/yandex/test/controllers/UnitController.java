@@ -17,8 +17,9 @@ public class UnitController {
     }
 
     @PostMapping("/imports")
-    public HttpStatus importUnit(@RequestBody UnitRequestDto UnitRequestDto ){
-
+    public HttpStatus importUnit(@RequestBody UnitRequestDto unitRequestDto ){
+        System.out.println();
+        UnitService.save(unitRequestDto);
         return HttpStatus.OK;
     }
 
